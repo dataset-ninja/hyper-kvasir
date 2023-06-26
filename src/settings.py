@@ -14,11 +14,12 @@ PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset"
 LICENSE: License = License.CC_BY_4_0()
 INDUSTRIES: List[Industry] = [Industry.Medical()]
 CV_TASKS: List[CVTask] = [
+    AnnotationType.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [
-    AnnotationType.SemanticSegmentation(),
+    AnnotationType.InstanceSegmentation(),
     AnnotationType.ObjectDetection(),
 ]
 
@@ -26,7 +27,7 @@ RELEASE_YEAR: int = 2020
 HOMEPAGE_URL: str = "https://datasets.simula.no/hyper-kvasir/"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 860988
+PREVIEW_IMAGE_ID: int = 860140
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/hyper-kvasir"
