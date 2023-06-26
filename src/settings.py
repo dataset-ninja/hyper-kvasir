@@ -5,40 +5,50 @@ from dataset_tools.templates import AnnotationType, CVTask, Industry, License
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "HyperKvasir"
+PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset"
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-INDUSTRIES: List[Industry] = None
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+LICENSE: License = License.CC_BY_4_0()
+INDUSTRIES: List[Industry] = [Industry.Medical()]
+CV_TASKS: List[CVTask] = [
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+]
+ANNOTATION_TYPES: List[AnnotationType] = [
+    AnnotationType.SemanticSegmentation(),
+    AnnotationType.ObjectDetection(),
+]
 
-RELEASE_YEAR: int = None
-HOMEPAGE_URL: str = None
+RELEASE_YEAR: int = 2020
+HOMEPAGE_URL: str = "https://datasets.simula.no/hyper-kvasir/"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 860988
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/hyper-kvasir"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[
+    Union[str, dict]
+] = "https://datasets.simula.no/downloads/hyper-kvasir/hyper-kvasir-segmented-images.zip"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
-PAPER: Optional[str] = None
-CITATION_URL: Optional[str] = None
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+PAPER: Optional[str] = "https://www.nature.com/articles/s41597-020-00622-y"
+CITATION_URL: Optional[str] = "https://datasets.simula.no/hyper-kvasir/"
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "NO-SW-AU joint research group"
+ORGANIZATION_URL: Optional[
+    Union[str, List[str]]
+] = "https://www.nature.com/articles/s41597-020-00622-y#author-information"
 TAGS: List[str] = None
 
 ##################################
