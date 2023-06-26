@@ -23,8 +23,27 @@ ds_name = "ds0"
 batch_size = 30
 download_bbox = True
 images_folder = "images"
-masks_folder = "masks"
+masks_folder = "corrected_masks"
 bbox_json_name = "bounding-boxes.json"
+
+
+def fix_masks(image_np: np.ndarray) -> np.ndarray:
+    lower_bound = np.array([200, 200, 200])
+    upper_bound = np.array([255, 255, 255])
+    condition_white = np.logical_and(
+        np.all(image_np >= lower_bound, axis=2), np.all(image_np <= upper_bound, axis=2)
+    )
+
+    lower_bound = np.array([1, 1, 1])
+    upper_bound = np.array([100, 100, 100])
+    condition_black = np.logical_and(
+        np.all(image_np >= lower_bound, axis=2), np.all(image_np <= upper_bound, axis=2)
+    )
+
+    image_np[np.where(condition_white)] = (255, 255, 255)
+    image_np[np.where(condition_black)] = (0, 0, 0)
+
+    return image_np
 
 
 def create_ann(image_name, masks_path, json_ann):
@@ -33,7 +52,9 @@ def create_ann(image_name, masks_path, json_ann):
     mask_path = os.path.join(masks_path, image_name)
     bbox_data = json_ann[get_file_name(image_name)]["bbox"]
 
-    image_np = sly.imaging.image.read(mask_path)[:, :, 0]
+    image_np = sly.imaging.image.read(mask_path)[:, :, :]
+    image_np = fix_masks(image_np)[:, :, 0]
+
     if len(np.unique(image_np)) != 1:
         if len(bbox_data) > 1:
             ret, curr_mask = connectedComponents(image_np.astype("uint8"), connectivity=8)
