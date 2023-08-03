@@ -1,6 +1,6 @@
 If you make use of the HyperKvasir data, please cite the following reference:
 
-``` bibtex
+```bibtex
 @article{Borgli2020,
   title = {{HyperKvasir, a comprehensive multi-class
     image and video dataset for gastrointestinal endoscopy}},
@@ -26,4 +26,4 @@ If you make use of the HyperKvasir data, please cite the following reference:
 }
 ```
 
-[🔗 Source](https://datasets.simula.no/hyper-kvasir/)
+[Source](https://datasets.simula.no/hyper-kvasir/)
