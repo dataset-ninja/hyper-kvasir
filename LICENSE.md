@@ -1,1 +1,1 @@
-HyperKvasir: The Largest Gastrointestinal Dataset is under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) license.
+HyperKvasir: The Largest Gastrointestinal Dataset (segmentation) is under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) license.
