@@ -1,4 +1,4 @@
-If you make use of the HyperKvasir data, please cite the following reference:
+If you make use of the HyperKvasir Segmentation data, please cite the following reference:
 
 ```bibtex
 @article{Borgli2020,
