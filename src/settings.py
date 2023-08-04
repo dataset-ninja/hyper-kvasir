@@ -13,8 +13,8 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "HyperKvasir (segmentation)"
-PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset (segmentation)"
+PROJECT_NAME: str = "HyperKvasir Segmentation"
+PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset (Segmentation Part)"
 
 ##################################
 # * After uploading to instance ##
