@@ -1,6 +1,6 @@
 Dataset **HyperKvasir Segmentation** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/G/v/bq/5HI7RAQcHMvhN7AcGGQa1mqcqX9QrEO4KMURm0F7zmGCsRI7Csb9vx7sAV38DLBLKgx0oSgKNGGJeRpbLEPdVybtK61OabaHc4Gn8eC7EOGVxsoAPPgTlGkSM7Xd.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/U/T/Ko/SHwNA3Wc6WIWRA8tIZoxmzrapCSomnmqeVCvwAxsPufX6wKt7861UvbeIxgSPsvkVZZGsqf3kjnmwggmPKDA7UvN1uMQSxeav5T8i4PpLZiviCkxgvEf4FnEwOfL.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
