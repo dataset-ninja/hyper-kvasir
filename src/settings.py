@@ -13,9 +13,9 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "HyperKvasir Segmentation"
-PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset (Segmentation Part)"
-HIDE_DATASET = False  # set False when 100% sure about repo quality
+PROJECT_NAME: str = "HyperKvasir Images"
+PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset (Images Part)"
+HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -25,9 +25,10 @@ APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Medical()]
 CATEGORY: Category = Category.Medical(sensitive_content=True)
 
 CV_TASKS: List[CVTask] = [
-    AnnotationType.InstanceSegmentation(),
+    CVTask.InstanceSegmentation(),
     CVTask.SemanticSegmentation(),
     CVTask.ObjectDetection(),
+    CVTask.Classification(),
 ]
 ANNOTATION_TYPES: List[AnnotationType] = [
     AnnotationType.InstanceSegmentation(),
@@ -40,7 +41,7 @@ if RELEASE_DATE is None:
 HOMEPAGE_URL: str = "https://datasets.simula.no/hyper-kvasir/"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 865838
+PREVIEW_IMAGE_ID: int = 7756635
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/hyper-kvasir"
@@ -85,7 +86,43 @@ ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "NO-SW-AU joint research gr
 ORGANIZATION_URL: Optional[
     Union[str, List[str]]
 ] = "https://www.nature.com/articles/s41597-020-00622-y#author-information"
-SLYTAGSPLIT: Optional[Dict[str, List[str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, List[str]]] = {
+    "GI tracts": [
+        'lower-gi-tract', 
+        'upper-gi-tract'
+    ],
+    "categories of findings": [
+        'anatomical-landmarks', 
+        'quality-of-mucosal-views', 
+        'pathological-findings', 
+        'therapeutic-interventions'
+    ],
+    "classification image sets": [    
+        "cecum",
+        "ileum",
+        "retroflex-rectum",
+        "hemorrhoids",
+        "polyps",
+        "ulcerative-colitis-grade-0-1",
+        "ulcerative-colitis-grade-1",        
+        "ulcerative-colitis-grade-1-2",
+        "ulcerative-colitis-grade-2",
+        "ulcerative-colitis-grade-2-3",
+        "ulcerative-colitis-grade-3",    
+        "bbps-0-1",
+        "bbps-2-3",    
+        "impacted-stool",
+        "dyed-lifted-polyps",
+        "dyed-resection-margins",
+        "pylorus",        
+        "retroflex-stomach",
+        "z-line",    
+        "barretts",
+        "barretts-short-segment", 
+        "esophagitis-a",
+        "esophagitis-b-d",            
+    ]
+}
 TAGS: List[str] = None
 
 ##################################

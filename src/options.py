@@ -5,7 +5,7 @@
 # * Preview class to visualize in SUMMARY.md overview section
 # * Literal["ClassesPreview", "HorizontalGrid", "SideAnnotationsGrid", "Poster"]
 # * If None, then preview_class will be set automatically to "ClassesPreview"
-PREVIEW_CLASS = "HorizontalGridAnimated"
+PREVIEW_CLASS = "ClassesPreview"
 
 IS_DETECTION_TASK: bool = None  # ? Set True if you want to visualize only bbox annotations
 
@@ -51,6 +51,31 @@ CLASSES_PREVIEW_ROW_HEIGHT: int = None
 CLASSES_PREVIEW_PADDINGS: dict = None
 CLASSES_PREVIEW_ROWS: int = None
 CLASSES_PREVIEW_GAP: int = None
+CLASSES_PREVIEW_TAGS: list[str] = [    
+    "cecum",
+    "ileum",
+    "retroflex-rectum",
+    "hemorrhoids",
+    "polyps",
+    "ulcerative-colitis-grade-0-1",
+    "ulcerative-colitis-grade-1",        
+    "ulcerative-colitis-grade-1-2",
+    "ulcerative-colitis-grade-2",
+    "ulcerative-colitis-grade-2-3",
+    "ulcerative-colitis-grade-3",    
+    "bbps-0-1",
+    "bbps-2-3",    
+    "impacted-stool",
+    "dyed-lifted-polyps",
+    "dyed-resection-margins",
+    "pylorus",        
+    "retroflex-stomach",
+    "z-line",    
+    "barretts",
+    "barretts-short-segment", 
+    "esophagitis-a",
+    "esophagitis-b-d",            
+]
 # default {"top": "10%", "bottom": "10%", "left": "10%", "right": "10%"}
 # set % or px as string values (e.i. "10%" or "10px")
 ###############################################################
@@ -118,6 +143,7 @@ def get_stats_options():
             "pad": CLASSES_PREVIEW_PADDINGS,
             "rows": CLASSES_PREVIEW_ROWS,
             "gap": CLASSES_PREVIEW_GAP,
+            "tags": CLASSES_PREVIEW_TAGS,
         },
         "ClassesHeatmaps": {
             "draw_style": DRAW_STYLE,
