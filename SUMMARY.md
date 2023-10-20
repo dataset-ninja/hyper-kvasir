@@ -1,4 +1,4 @@
-**HyperKvasir: The Largest Gastrointestinal Dataset (Images Part)** is a dataset for instance segmentation, semantic segmentation, object detection, and classification tasks. It is used in the medical industry. 
+**HyperKvasir: The Largest Gastrointestinal Dataset (Images)** is a dataset for instance segmentation, semantic segmentation, object detection, and classification tasks. It is used in the medical industry. 
 
 The dataset consists of 111079 images with 2134 labeled objects belonging to 2 different classes including *polyp* and *polyp_bbox*.
 

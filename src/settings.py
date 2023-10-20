@@ -14,8 +14,8 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "HyperKvasir Images"
-PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset (Images Part)"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+PROJECT_NAME_FULL: str = "HyperKvasir: The Largest Gastrointestinal Dataset (Images)"
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
