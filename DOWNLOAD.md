@@ -1,6 +1,6 @@
 Dataset **HyperKvasir Images** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](Set 'HIDE_DATASET=False' to generate download link)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/E/0/ci/brYCDoIcqwgIGNEcUh5iTpddLTCcJyGOVj2zht6rpmcyYEofnXJwJlBvYh3xULOiBnbnXgql8QQH4lv55WSA5Lok3Y9ZR6YHOLYZcFvOupw998dvds5JcBYJUS0E.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
