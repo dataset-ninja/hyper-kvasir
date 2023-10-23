@@ -107,6 +107,7 @@ def get_visualization_options():
         "Poster": {
             "title": POSTER_TITLE,
             "is_detection_task": POSTER_IS_DETECTION_TASK,
+            "num_classes": None if CLASSES_PREVIEW_TAGS is None else len(CLASSES_PREVIEW_TAGS),
         },
         "HorizontalGrid": {
             "rows": HORIZONTAL_GRID_ROWS,
@@ -158,6 +159,7 @@ def get_stats_options():
         "Previews": {
             "is_detection_task": PREVIEWS_IS_DETECTION_TASK,
         },
+      
     }
 
     checked_stats_settings = {}
